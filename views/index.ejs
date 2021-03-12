@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Livros</title>
+    
+    <style>
+        /*body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #container {
+            width: 720px;
+            height: 100vh;
+            margin: 2px auto;
+            border: 2px solid rgba(0, 0, 0, 0.616);
+        }
+
+        #topo {
+            width: 750px;
+            height: 100px;
+            background: #0e4979ab;
+        }
+
+        #topo h1 {
+            padding-top: 25px;
+            text-align: center;
+        }
+
+        #form-field {
+            width: 750px;
+            height: 440px;
+            background-color: aliceblue;
+        }
+
+        input {
+            height: 30px;
+            width: 80%;
+            font-size: 18px;
+            margin-bottom: 10px;
+            margin-left: 8px;
+            background-color: #fff;
+            padding-left: 5px;
+            display: block;
+        }
+
+        fieldset {
+            height: 330px;
+            margin: 0px 5px 0px 5px;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        #submit-data {
+            margin: 15px 45%;
+        }
+        */
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="container">
+        <div id="topo">
+            <h1> Cadastro de Livros</h1>
+        </div>
+        <div id="form-field">
+            <form action="/show" method="POST">
+                <fieldset>
+                    <legend>Informações do Livro</legend>
+
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div>
+                        <label for="autor">Autor:</label>
+                        <input type="text" name="autor" id="autor">
+                    </div>
+                    <div>
+                        <label for="editora">Editora:</label>
+                        <input type="text" name="editora" id="editora">
+                    </div>
+                    <div>
+                        <label for="idioma">Idioma:</label>
+                        <input type="text" name="idioma" id="idioma">
+                    </div>
+                    <div>
+                        <label for="npag">Nº de Páginas:</label>
+                        <input type="text" name="npag" id="npag">
+                    </div>
+                    <div id="submit-data">
+                        <button type="submit" id="enviar">Cadastrar Livro</button>
+                    </div>
+                </fieldset>
+
+            </form>
+            <h2> Livros </h2>
+
+            <table class="books-t">
+                <tr>
+                    <th> Nome </th>
+                    <th> Autor </th>
+                    <th> Editora </th>
+                    <th> Idioma </th>
+                    <th> Nº de páginas </th>
+                    <th> Ações </th>
+                </tr>
+                <% for(var i=0; i < books.length ; i++){%>
+                    <tr>
+                        <td>
+                            <%= books[i].nome %>
+                        </td>
+                        <td>
+                            <%= books[i].autor %>
+                        </td>
+                        <td>
+                            <%= books[i].editora %>
+                        </td>
+                        <td>
+                            <%= books[i].idioma %>
+                        </td>
+                        <td>
+                            <%= books[i].npag %>
+                        </td>
+                        <td><button onclick="updateItem('<%=books[i]._id%>')" id="update-button"> Alterar</button><button onclick="deleteItem('<%=books[i]._id%>')" class="delete-button" value=" <%=books[i]._id  %> "> Deletar </button></td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+        <script src="main.js" ></script>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#container{
+    width: 750px;
+    height: 540px;
+    margin: 2px auto;
+    border: 2px solid rgba(0, 0, 0, 0.616);
+}
+
+#topo{
+    width: 750px;
+    height: 100px;
+    background: #0e4979ab;
+}
+
+#topo h1{
+    padding-top: 25px;
+    text-align: center;
+}
+
+#form-field{
+    width: 750px;
+    height: 440px;
+    background-color: aliceblue;
+}
+
+
+
+
+input{
+    height: 30px;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    background-color: #fff; 
+    padding-left: 5px;
+    display: block;
+ }
+
+fieldset{
+    height: 330px;
+    margin: 0px 5px 0px 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+legend{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+#submit-data{
+    margin:15px 45%;
+}
+
